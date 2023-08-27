@@ -9,16 +9,15 @@ jobs:
   terraform:
     name: 'GH-Runners-01'
     runs-on: 
-    - self-hosted
-    
+    - self-hosted    
     defaults:
       run:
         shell: bash
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
-
-	- name: Terraform Init
+      uses: actions/checkout@v2
+      
+    - name: Terraform Init
       run: terraform init
 
     - name: Terraform Format
